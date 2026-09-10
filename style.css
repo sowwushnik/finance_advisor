@@ -21,16 +21,11 @@ header{
 }
 
 #nav-items li{
-    font-family: "OpenSans-SemiBold";
     font-weight: 600;
     font-size: 18px;
     list-style: none;
     margin-left: 100px;
     text-transform: capitalize;
-}
-
-.active{
-    color: #226b28;
 }
 
 main {
@@ -40,5 +35,8 @@ main {
 }
 
 .footer{
-    background-color: #226b28;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #506e53;
+    padding: 10px;
 }
