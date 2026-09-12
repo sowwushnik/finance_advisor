@@ -1,7 +1,13 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header{
@@ -13,6 +19,16 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 25px 100px;
+    background-color: #506e53;
+}
+
+header a{
+    text-decoration: none;
+    color: inherit;
+    background-color: #7d8f7f;
+    padding: 10px;
+    border-radius: 20px;
+    margin: -20px;
 }
 
 #nav-items{
@@ -28,6 +44,10 @@ header{
     text-transform: capitalize;
 }
 
+#nav-items li.active a{
+    background-color: #f5f7f5;
+}
+
 main {
     flex: 1;
     margin-top: 100px; 
@@ -36,7 +56,37 @@ main {
 
 .footer{
     text-align: center;
-    font-family: sans-serif;
     background-color: #506e53;
-    padding: 10px;
+    padding: 30px;
+}
+
+.creators{
+    margin-bottom: 20px;
+    background-color: #748376;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.values{
+    margin-bottom: 20px;
+    background-color: #748376;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.values ul{
+    list-style-type: none;
+}
+
+.blog-posts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post{
+    background-color: #748376;
+    padding: 20px;
+    border-radius: 20px;
 }
