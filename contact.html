@@ -5,28 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Contacts</title>
+    <title>Contacts | Finance Advising</title>
 </head>
 
-<body>
+<body class="assignment-page">
 
     <header> 
         <div class = "logo">
             <h1>Contacts</h1>
         </div>
 
-        <div class = "nav">
+        <nav class = "nav" aria-label="Main navigation">
             <ul id = "nav-items">
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "about.html">About</a></li>
                 <li><a href = "blog.html">Blog</a></li>
-                <li class="active"><a href = "contact.html">Contact</a></li>
+                <li class="active"><a href = "contact.html" aria-current="page">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
+    <main>
 
-    <main> 
-        
+        <section class="content-card">
+            <h2>Send a Message</h2>
+            <form id="contact-form" onsubmit="event.preventDefault()">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Select a topic</option>
+                    <option value="budgeting">Budgeting</option>
+                    <option value="investing">Investing</option>
+                    <option value="retirement-planning">Retirement planning</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </main>
         
 

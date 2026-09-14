@@ -4,27 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Finance Advising</title>
+    <title>Home | Finance Advising</title>
 </head>
-<body>
+<body class="assignment-page">
 
     <header>
         <div class = "logo">
             <h1>Finance Advising</h1>
         </div>
 
-        <div class = "nav">
+        <nav class = "nav" aria-label="Main navigation">
             <ul id = "nav-items">
-                <li class="active"><a href = "index.html">Home</a></li>
+                <li class="active"><a href = "index.html" aria-current="page">Home</a></li>
                 <li><a href = "about.html">About</a></li>
                 <li><a href = "blog.html">Blog</a></li>
                 <li><a href = "contact.html">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
     <main> 
-        <p> This is where your knowledge with finance will grow. This is where experience is gained and shared with others. </p>
+        <section class="content-card">
+            <h2>Welcome to Finance Advising</h2>
+            <p>This is where your knowledge with finance will grow. This is where experience is gained and shared with others.</p>
+            <h3>Our Topics</h3>
+            <ul>
+                <li>Budgeting</li>
+                <li>Investing</li>
+                <li>Retirement planning</li>
+            </ul>
+            <h3>Explore the Website</h3>
+            <ol>
+                <li>Meet the team on the <a href="about.html">About page</a>.</li>
+                <li>Read our updates on the <a href="blog.html">Blog page</a>.</li>
+                <li>Send a message through the <a href="contact.html">Contact page</a>.</li>
+            </ol>
+        </section>
+
+        <section class="content-card">
+            <h2>Financial Topics</h2>
+            <table>
+                <thead>
+                    <tr><th scope="col">Topic</th><th scope="col">Focus</th><th scope="col">Goal</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Budgeting</td><td>Income and expenses</td><td>Plan everyday spending</td></tr>
+                    <tr><td>Investing</td><td>Risk and return</td><td>Understand investment basics</td></tr>
+                    <tr><td>Retirement planning</td><td>Long-term saving</td><td>Prepare for future needs</td></tr>
+                </tbody>
+            </table>
+        </section>
+
     </main>
 
     <footer class = "footer">

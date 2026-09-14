@@ -14,7 +14,6 @@ body{
     color: #1E293B;
 }
 
-/* HEADER */
 
 header{
     width: 100%;
@@ -48,7 +47,6 @@ header {
     color: #FFFFFF;
 }
 
-/* NAVIGATION */
 
 #nav-items{
     display: flex;
@@ -80,7 +78,6 @@ header {
     color: #FFFFFF;
 }
 
-/* MAIN CONTENT */
 
 main {
     flex: 1;
@@ -91,7 +88,6 @@ main {
     width: 100%;
 }
 
-/* SECTIONS */
 
 .creators, .values, .post{
     margin-bottom: 24px;
@@ -127,7 +123,125 @@ main {
     gap: 20px;
 }
 
-/* FOOTER */
+
+
+.assignment-page {
+    line-height: 1.6;
+}
+
+.assignment-page header {
+    position: static;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.assignment-page main {
+    max-width: 1200px;
+    margin-top: 0;
+}
+
+.assignment-page h1 { font-size: 2rem; }
+.assignment-page h2 { font-size: 1.5rem; margin-bottom: 16px; }
+.assignment-page h3 { font-size: 1.125rem; margin: 16px 0 8px; }
+.assignment-page p { margin-top: 16px; }
+
+.content-card {
+    margin-bottom: 24px;
+    padding: 32px;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+}
+
+.content-card a {
+    color: #047857;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.content-card a:hover { color: #0F172A; }
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    text-align: center;
+}
+
+.team-members .profile-img {
+    width: 180px;
+    height: 180px;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+.content-card table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.content-card th, .content-card td {
+    padding: 12px;
+    border: 1px solid #94A3B8;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.content-card th { background-color: #0F172A; color: #FFFFFF; }
+.content-card tbody tr:nth-child(even) { background-color: #F8FAFC; }
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 640px;
+    gap: 8px;
+}
+
+#contact-form label { font-weight: 600; }
+
+#contact-form input, #contact-form select, #contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #94A3B8;
+    border-radius: 8px;
+    background-color: #F8FAFC;
+    color: #1E293B;
+    font: inherit;
+}
+
+#contact-form textarea { resize: vertical; }
+
+#contact-form button {
+    align-self: flex-start;
+    padding: 12px 24px;
+    border: 1px solid #047857;
+    border-radius: 8px;
+    background-color: #047857;
+    color: #FFFFFF;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#contact-form button:hover { background-color: #065F46; }
+
+#contact-form input:focus, #contact-form select:focus,
+#contact-form textarea:focus, #contact-form button:focus-visible,
+.assignment-page a:focus-visible {
+    outline: 3px solid #059669;
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    .assignment-page header { padding: 20px; }
+    .assignment-page #nav-items { padding: 0; gap: 4px; flex-wrap: wrap; }
+    .assignment-page #nav-items a { padding: 8px 12px; }
+    .assignment-page main { padding: 24px 16px; }
+    .content-card { padding: 20px; }
+    .content-card th, .content-card td { padding: 8px; }
+}
 
 .footer{
     text-align: center;
