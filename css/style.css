@@ -1,0 +1,138 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    background-color: #F8FAFC;
+    color: #1E293B;
+}
+
+/* HEADER */
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 80px;
+
+    background-color: #0F172A;
+    color: #FFFFFF;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 80px;
+
+    background-color: #0F172A;
+    color: #FFFFFF;
+}
+
+/* NAVIGATION */
+
+#nav-items{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+}
+
+#nav-items li a{
+    display: inline-block;
+
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+
+    color: #94A3B8;
+
+    padding: 8px 18px;
+    border-radius: 8px;
+}
+
+#nav-items li a:hover{
+    color: #FFFFFF;
+}
+
+#nav-items li.active a {
+    background-color: #059669;
+    color: #FFFFFF;
+}
+
+/* MAIN CONTENT */
+
+main {
+    flex: 1;
+    margin-top: 80px; 
+    padding: 40px 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* SECTIONS */
+
+.creators, .values, .post{
+    margin-bottom: 24px;
+    background-color: #FFFFFF;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #000000;
+}
+
+.creators{
+    text-align: center;
+}
+
+.profile-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.values ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.blog-posts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align: center;
+    background-color: #0F172A;
+    padding: 24px;
+    background-color: #0F172A;
+    color: #94A3B8;
+}
