@@ -7,54 +7,87 @@
     <link rel="stylesheet" href="css/style.css">
     <title>About Us</title>
 </head>
-<body class="assignment-page">
-    <header> 
-        <div class = "logo">
+<body class="page-layout">
+
+    <header class="page-header"> 
+        <div class="logo">
             <h1>About</h1>
         </div>
 
-        <nav class = "nav">
-            <ul id = "nav-items">
-                <li><a href = "index.html">Home</a></li>
-                <li class="active"><a href = "about.html">About</a></li>
-                <li><a href = "blog.html">Blog</a></li>
-                <li><a href = "contact.html">Contact</a></li>
+        <nav class="nav">
+            <ul id="nav-items">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main> 
+    <aside class="page-sidebar">
+        <h3>About Navigation</h3>
+        <ul>
+            <li><a href="#creators">Creators</a></li>
+            <li><a href="#values">Core Values</a></li>
+        </ul>
+    </aside>
 
-        <section class = "creators">
-            <h2>Creators</h2>
+    <main class="page-main"> 
 
-            <img src = "images/Kulantaev_Meirkhan_Kairgaliuly OG.jpg" alt = "Meirkhan Kulantayev" class = "profile-img">
-            <img src = "images/Zeinulla_Nurzhan.jpg" alt = "Nurzhan Zeinulla" class = "profile-img">
-
-
+        <section class="content-card" id="creators">
+            <h2>Meet the Team</h2>
             <p> 
-                We are Meirkhan and Nurzhan. We are passionate about helping people make informed financial decisions.
+                We are passionate about helping people make informed financial decisions.
                 The main goal of our website is to provide valuable insights and guidance on various financial topics, including budgeting, investing, and retirement planning.
                 We believe that financial literacy is essential for achieving long-term financial stability and success, and we are committed to sharing our knowledge and expertise with our audience.
             </p>
+
+            
+            <div class="card-row">
+
+                <article class="card">
+                    <img src="images/Kulantaev_Meirkhan_Kairgaliuly OG.jpg" alt="Meirkhan Kulantayev" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">Meirkhan Kulantayev</h3>
+                        <p class="card-text">Meirkhan is a enthusiast with a passion for helping people achieve their financial goals.</p>
+                        <a href="contact.html" class="card-btn">Contact Meirkhan</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="images/Zeinulla_Nurzhan.jpg" alt="Nurzhan Zeinulla" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">Nurzhan Zeinulla</h3>
+                        <p class="card-text">Co-founder & Analyst dedicated to simplifying financial research for everyone.</p>
+                        <a href="contact.html" class="card-btn">Contact Nurzhan</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                <img src="images/what.png" alt="?" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">Join Our Team</h3>
+                    <p class="card-text">We are always looking for passionate financial enthusiasts and analysts to join us.</p>
+                    <a href="contact.html" class="card-btn">Get in Touch</a>
+                </div>
+                </article>
+
+            </div>
+
         </section>
-        
-        <section class = "values">
 
+        <section class="content-card" id="values">
             <h2>Our Core Values</h2>
-
             <ul>
                 <li><strong>Simplicity:</strong> Complex topics explained in plain English </li>
                 <li><strong>Objectivity:</strong> Independent insights without hidden bias </li>
                 <li><strong>Practicality:</strong> Tools and steps you can apply immediately </li>
             </ul>
-
         </section>
-
 
     </main>
 
-    <footer class = "footer">
+    <footer class="footer page-footer">
         <p>2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
     </footer>
     

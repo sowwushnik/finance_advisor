@@ -5,47 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Authors: Meirkhan Kulantayev, Nurzhan Zeinulla -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Blog</title>
+    <title>Blog | Finance Advising</title>
 </head>
-<body class="assignment-page">
+<body class="page-layout">
 
-    <header> 
-        <div class = "logo">
+    <header class="page-header"> 
+        <div class="logo">
             <h1>Blog</h1>
         </div>
 
-        <nav class = "nav">
-            <ul id = "nav-items">
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "about.html">About</a></li>
-                <li class="active"><a href = "blog.html">Blog</a></li>
-                <li><a href = "contact.html">Contact</a></li>
+        <nav class="nav">
+            <ul id="nav-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="active"><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        
-        <section class = "blog-posts">
 
-            <article class = "post">
-                <h2>First Post - <time datetime = "2026-09-10"> September 10, 2026</time></h2>
+    <aside class="page-sidebar">
+        <h3>Recent Posts</h3>
+        <ul>
+            <li><a href="#post-1">First Post</a></li>
+            <li><a href="#post-2">Second Post</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </aside>
+
+    <main class="page-main">
+        
+        <section class="blog-posts">
+
+            <article class="post" id="post-1">
+                <h2>First Post - <time datetime="2026-09-10">September 10, 2026</time></h2>
                 <p> 
                     This is the first post on our blog. Right now I'm (Meirkhan) trying to practice more, so I can improve the quality of our content.
                 </p>
             </article>
 
-            <article class = "post">
-            <h2>Second Post - <time datetime = "2026-09-12"> September 12, 2026</time></h2>
-            <p> 
-                Made some updates for looks. Now posts and other things have some background outline
-            </p>
+            <article class="post" id="post-2">
+                <h2>Second Post - <time datetime="2026-09-12">September 12, 2026</time></h2>
+                <p> 
+                    Made some updates for looks. Now posts and other things have some background outline.
+                </p>
             </article>
         
         </section>
+
+        <section class="content-card" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/galery1.jpg" alt="Photo 1">
+                <div class="overlay">
+                    <span class="caption">Photo 1</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galery2.jpg" alt="Photo 2">
+                <div class="overlay">
+                    <span class="caption">Photo 2</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galery3.jpg" alt="Photo 3">
+                <div class="overlay">
+                    <span class="caption">Photo 3</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galery4.jpg" alt="Photo 4">
+                <div class="overlay">
+                    <span class="caption">Photo 4</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galery5.jpg" alt="Photo 5">
+                <div class="overlay">
+                    <span class="caption">Photo 5</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galery6.jpg" alt="Photo 6">
+                <div class="overlay">
+                    <span class="caption">Photo 6</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galery7.jpg" alt="Photo 7">
+                <div class="overlay">
+                    <span class="caption">Photo 7</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galery8.jpg" alt="Photo 8">
+                <div class="overlay">
+                    <span class="caption">Photo 8</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galery9.jpg" alt="Photo 9">
+                <div class="overlay">
+                    <span class="caption">Photo 9</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     </main>
 
-    <footer class = "footer">
+    <footer class="footer page-footer">
         <p>2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
     </footer>
     
