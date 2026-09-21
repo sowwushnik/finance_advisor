@@ -19,6 +19,8 @@ body {
 
 header {
     display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     align-items: center;
     justify-content: space-between;
     padding: 1.25rem 2.5rem;
@@ -33,6 +35,8 @@ header {
 
 .nav #nav-items {
     display: flex;
+    flex-wrap: wrap;
+    padding: 0;
     align-items: center;
     list-style: none;
     gap: 1.25rem;
@@ -61,7 +65,7 @@ header {
         "header header"
         "sidebar main"
         "footer footer";
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: 260px minmax(0, 1fr);
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
@@ -113,6 +117,7 @@ header {
 
 .page-main {
     grid-area: main;
+    min-width: 0;
     padding: 32px;
 }
 
@@ -164,11 +169,6 @@ header {
     gap: 16px;
 }
 
-.assignment-page main {
-    max-width: 1200px;
-    margin-top: 0;
-}
-
 .assignment-page h1 { font-size: 2rem; }
 .assignment-page h2 { font-size: 1.5rem; margin-bottom: 16px; }
 .assignment-page h3 { font-size: 1.125rem; margin: 16px 0 8px; }
@@ -183,6 +183,7 @@ header {
 
 .card {
     flex: 1 1 280px;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
@@ -242,7 +243,7 @@ header {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
     gap: 16px;
     margin-top: 20px;
 }
@@ -391,10 +392,12 @@ header {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto 1fr auto;
     }
-    .assignment-page header { padding: 20px; }
-    .assignment-page #nav-items { padding: 0; gap: 4px; flex-wrap: wrap; }
-    .assignment-page #nav-items a { padding: 8px 12px; }
-    .assignment-page main { padding: 24px 16px; }
+    header { padding: 20px; }
+    .logo { font-size: 1rem; }
+    .nav #nav-items { gap: 4px; }
+    .nav #nav-items a { display: block; padding: 8px 12px; }
+    .page-main { padding: 24px 16px; }
+    .page-sidebar { border-right: 0; border-top: 1px solid #E2E8F0; }
     .content-card { padding: 20px; }
     .content-card th, .content-card td { padding: 8px; }
 }

@@ -9,9 +9,9 @@
     <title>Contacts | Finance Advising</title>
 </head>
 
-<body class="assignment-page">
+<body class="assignment-page page-layout">
 
-    <header> 
+    <header class="page-header"> 
         <div class = "logo">
             <h1>Contacts</h1>
         </div>
@@ -25,9 +25,18 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <aside class="page-sidebar" aria-label="Contact navigation">
+        <h3>Contact Navigation</h3>
+        <ul>
+            <li><a href="#message-form">Send a Message</a></li>
+            <li><a href="about.html#creators">Meet the Team</a></li>
+            <li><a href="index.html#topics">Financial Topics</a></li>
+        </ul>
+    </aside>
 
-        <section class="content-card">
+    <main class="page-main">
+
+        <section class="content-card" id="message-form">
             <h2>Send a Message</h2>
             <form id="contact-form" onsubmit="event.preventDefault()">
                 <label for="name">Name</label>
@@ -53,7 +62,7 @@
     </main>
         
 
-    <footer class = "footer">
+    <footer class="footer page-footer">
         <p>2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
     </footer>
     
