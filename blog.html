@@ -2,131 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Authors: Meirkhan Kulantayev, Nurzhan Zeinulla -->
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog | Finance Advising</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page-layout">
-
-    <header class="page-header"> 
-        <div class="logo">
-            <h1>Blog</h1>
-        </div>
-
-        <nav class="nav">
-            <ul id="nav-items">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="active"><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+<body class="d-flex flex-column min-vh-100 bg-light text-dark">
+    <a class="visually-hidden-focusable p-2" href="#main">Skip to content</a>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark py-3" data-bs-theme="dark" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Finance Advising</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="navbar-nav ms-auto mb-0">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white active fw-bold" href="blog.html" aria-current="page">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-
-
-    <aside class="page-sidebar">
-        <h3>Recent Posts</h3>
-        <ul>
-            <li><a href="#post-1">First Post</a></li>
-            <li><a href="#post-2">Second Post</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-        </ul>
-    </aside>
-
-    <main class="page-main">
-        
-        <section class="blog-posts">
-
-            <article class="post" id="post-1">
-                <h2>First Post - <time datetime="2026-09-10">September 10, 2026</time></h2>
-                <p> 
-                    This is the first post on our blog. Right now I'm (Meirkhan) trying to practice more, so I can improve the quality of our content.
-                </p>
-            </article>
-
-            <article class="post" id="post-2">
-                <h2>Second Post - <time datetime="2026-09-12">September 12, 2026</time></h2>
-                <p> 
-                    Made some updates for looks. Now posts and other things have some background outline.
-                </p>
-            </article>
-        
+    <main class="container flex-grow-1 py-4 py-lg-5 px-3 px-sm-2" id="main">
+        <h1 class="mb-4">Blog</h1>
+        <section class="row g-4 mb-4" aria-label="Recent posts">
+            <div class="col-12 col-lg-6">
+                <article class="bg-white border rounded p-4 h-100">
+                    <h2 class="h4 mb-3">First Post</h2>
+                    <p class="text-secondary mb-2"><time datetime="2026-09-10">September 10, 2026</time></p>
+                    <p class="mb-0">This is the first post on our blog. I am Meirkhan, and I am practicing to improve the quality of our content.</p>
+                </article>
+            </div>
+            <div class="col-12 col-lg-6">
+                <article class="bg-white border rounded p-4 h-100">
+                    <h2 class="h4 mb-3">Second Post</h2>
+                    <p class="text-secondary mb-2"><time datetime="2026-09-12">September 12, 2026</time></p>
+                    <p class="mb-0">We updated the appearance. Posts and other content now have a background and outline.</p>
+                </article>
+            </div>
         </section>
-
-        <section class="content-card" id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="images/galery1.jpg" alt="Photo 1">
-                <div class="overlay">
-                    <span class="caption">Photo 1</span>
+        <section class="row justify-content-center mt-lg-4" aria-labelledby="gallery-title">
+            <div class="col-12 col-lg-10">
+                <h2 id="gallery-title" class="mb-3">Gallery</h2>
+                <div id="gallery" class="carousel slide" role="region" aria-roledescription="carousel" aria-label="Photo gallery">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#gallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#gallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#gallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#gallery" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#gallery" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#gallery" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#gallery" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                        <button type="button" data-bs-target="#gallery" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        <button type="button" data-bs-target="#gallery" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                    </div>
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="images/galery1.jpg" class="d-block w-100 gallery-photo" alt="Gallery photograph 1 of 9">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/galery2.jpg" class="d-block w-100 gallery-photo" alt="Gallery photograph 2 of 9">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/galery3.jpg" class="d-block w-100 gallery-photo" alt="Gallery photograph 3 of 9">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/galery4.jpg" class="d-block w-100 gallery-photo" alt="Gallery photograph 4 of 9">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/galery5.jpg" class="d-block w-100 gallery-photo" alt="Gallery photograph 5 of 9">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/galery6.jpg" class="d-block w-100 gallery-photo" alt="Gallery photograph 6 of 9">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/galery7.jpg" class="d-block w-100 gallery-photo" alt="Gallery photograph 7 of 9">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/galery8.jpg" class="d-block w-100 gallery-photo" alt="Gallery photograph 8 of 9">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/galery9.jpg" class="d-block w-100 gallery-photo" alt="Gallery photograph 9 of 9">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#gallery" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded p-3" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#gallery" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded p-3" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
-
-            <div class="gallery-item">
-                <img src="images/galery2.jpg" alt="Photo 2">
-                <div class="overlay">
-                    <span class="caption">Photo 2</span>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/galery3.jpg" alt="Photo 3">
-                <div class="overlay">
-                    <span class="caption">Photo 3</span>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/galery4.jpg" alt="Photo 4">
-                <div class="overlay">
-                    <span class="caption">Photo 4</span>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/galery5.jpg" alt="Photo 5">
-                <div class="overlay">
-                    <span class="caption">Photo 5</span>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/galery6.jpg" alt="Photo 6">
-                <div class="overlay">
-                    <span class="caption">Photo 6</span>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/galery7.jpg" alt="Photo 7">
-                <div class="overlay">
-                    <span class="caption">Photo 7</span>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/galery8.jpg" alt="Photo 8">
-                <div class="overlay">
-                    <span class="caption">Photo 8</span>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/galery9.jpg" alt="Photo 9">
-                <div class="overlay">
-                    <span class="caption">Photo 9</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
+        </section>
     </main>
-
-    <footer class="footer page-footer">
-        <p>2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
+    <footer class="bg-dark text-white text-center p-4 mt-4">
+        <p class="mb-0">2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -1,76 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Authors: Meirkhan Kulantayev, Nurzhan Zeinulla -->
-        <link rel="stylesheet" href="css/style.css">
-        <title>Home | Finance Advising</title>
-    </head>
-    
-    <body class="assignment-page page-layout">
-
-        <header class="page-header">
-            <div class = "logo">
-                <h1>Finance Advising</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Finance Advising | Finance Advising</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light text-dark">
+    <a class="visually-hidden-focusable p-2" href="#main">Skip to content</a>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark py-3" data-bs-theme="dark" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Finance Advising</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="navbar-nav ms-auto mb-0">
+                    <li class="nav-item"><a class="nav-link text-white active fw-bold" href="index.html" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+    </header>
+    <main class="container flex-grow-1 py-4 py-lg-5 px-3 px-sm-2" id="main">
+        <h1 class="mb-4">Welcome to Finance Advising</h1>
+        <section class="row g-4 mb-4" aria-label="Introduction">
+            <div class="col-12 col-lg-6">
+                <div class="bg-white border rounded p-3 p-lg-4 h-100">
+                    <h2 class="mb-3">Learn about finance</h2>
+                    <p class="mb-3">This is where your knowledge of finance will grow. Experience is gained and shared with others.</p>
+                    <a class="btn btn-success btn-lg" href="about.html">Meet the team</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="bg-white border rounded p-3 p-lg-4 h-100">
+                    <h2 class="mb-3">Explore the website</h2>
+                    <p class="mb-3">Read our updates, explore financial topics, or send us a message.</p>
+                    <div class="btn-group" role="group" aria-label="Explore pages">
+                        <a class="btn btn-outline-success btn-sm" href="blog.html">Blog</a>
+                        <a class="btn btn-outline-success btn-sm" href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="responsive-demo mt-4" aria-labelledby="responsive-title">
+            <h2 id="responsive-title">Responsive Financial Tips</h2>
+            <p>The text and cards in this section change with CSS media queries.</p>
+            <div class="media-card-grid">
+                <article class="media-card">
+                    <h3>Track spending</h3>
+                    <p>Record income and expenses to understand where your money goes.</p>
+                </article>
+                <article class="media-card">
+                    <h3>Save regularly</h3>
+                    <p>Set aside a small part of your income every month.</p>
+                </article>
+                <article class="media-card">
+                    <h3>Plan ahead</h3>
+                    <p>Set clear financial goals and review them regularly.</p>
+                </article>
+            </div>
+        </section>
+        <section id="topics" class="mt-lg-4" aria-labelledby="topics-title">
+            <h2 class="mb-3" id="topics-title">Financial Topics</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="bg-white border rounded p-3 p-lg-4 h-100">
+                        <h3 class="h4 mb-3">Budgeting</h3>
+                        <p class="mb-0">Understand income and expenses to plan everyday spending.</p>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="bg-white border rounded p-3 p-lg-4 h-100">
+                        <h3 class="h4 mb-3">Investing</h3>
+                        <p class="mb-0">Explore risk and return to understand investment basics.</p>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="bg-white border rounded p-3 p-lg-4 h-100">
+                        <h3 class="h4 mb-3">Retirement planning</h3>
+                        <p class="mb-0">Learn about long-term saving to prepare for future needs.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center p-4 mt-4">
+        <p class="mb-0">2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-            <nav class = "nav" aria-label="Main navigation">
-                <ul id = "nav-items">
-                    <li class="active"><a href = "index.html" aria-current="page">Home</a></li>
-                    <li><a href = "about.html">About</a></li>
-                    <li><a href = "blog.html">Blog</a></li>
-                    <li><a href = "contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <aside class="page-sidebar" aria-label="Home sections">
-            <h3>Home Navigation</h3>
-            <ul>
-                <li><a href="#welcome">Welcome</a></li>
-                <li><a href="#topics">Financial Topics</a></li>
-            </ul>
-        </aside>
-
-        <main class="page-main"> 
-            <section class="content-card" id="welcome">
-                <h2>Welcome to Finance Advising</h2>
-                <p>This is where your knowledge with finance will grow. This is where experience is gained and shared with others.</p>
-                <h3>Our Topics</h3>
-                <ul>
-                    <li>Budgeting</li>
-                    <li>Investing</li>
-                    <li>Retirement planning</li>
-                </ul>
-                <h3>Explore the Website</h3>
-                <ol>
-                    <li>Meet the team on the <a href="about.html">About page</a></li>
-                    <li>Read our updates on the <a href="blog.html">Blog page</a></li>
-                    <li>Send a message through the <a href="contact.html">Contact page</a></li>
-                </ol>
-            </section>
-
-            <section class="content-card" id="topics">
-                <h2>Financial Topics</h2>
-                <table>
-                    <thead>
-                        <tr><th scope="col">Topic</th><th scope="col">Focus</th><th scope="col">Goal</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Budgeting</td><td>Income and expenses</td><td>Plan everyday spending</td></tr>
-                        <tr><td>Investing</td><td>Risk and return</td><td>Understand investment basics</td></tr>
-                        <tr><td>Retirement planning</td><td>Long-term saving</td><td>Prepare for future needs</td></tr>
-                    </tbody>
-                </table>
-            </section>
-
-        </main>
-
-        <footer class="footer page-footer">
-            <p>2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
-        </footer>
-        
-    </body>
-
+</body>
 </html>
