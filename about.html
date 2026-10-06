@@ -12,16 +12,21 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark py-3" data-bs-theme="dark" aria-label="Main navigation">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Finance Advising</a>
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-graph-up-arrow text-success" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/>
+                    </svg>
+                    <span>Finance Advising</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="main-nav">
                     <ul class="navbar-nav ms-auto mb-0">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white active fw-bold" href="about.html" aria-current="page">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white active fw-bold" href="about.html" aria-current="page">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +43,7 @@
                     <div class="card-body d-flex flex-column p-4">
                         <h3 class="card-title h4 mb-3">Meirkhan Kulantayev</h3>
                         <p class="card-text mb-3">Meirkhan is an enthusiast with a passion for helping people achieve their financial goals.</p>
-                        <a class="btn btn-success mt-auto align-self-start" href="contact.html">Contact Meirkhan</a>
+                        <a class="btn btn-success mt-auto align-self-start w-100" href="contact.html">Contact Meirkhan</a>
                     </div>
                 </article>
                 <article class="card">
@@ -46,7 +51,7 @@
                     <div class="card-body d-flex flex-column p-4">
                         <h3 class="card-title h4 mb-3">Nurzhan Zeinulla</h3>
                         <p class="card-text mb-3">Co-founder and analyst dedicated to simplifying financial research for everyone.</p>
-                        <a class="btn btn-success mt-auto align-self-start" href="contact.html">Contact Nurzhan</a>
+                        <a class="btn btn-success mt-auto align-self-start w-100" href="contact.html">Contact Nurzhan</a>
                     </div>
                 </article>
                 <article class="card">
@@ -54,24 +59,44 @@
                     <div class="card-body d-flex flex-column p-4">
                         <h3 class="card-title h4 mb-3">Join Our Team</h3>
                         <p class="card-text mb-3">We are always looking for passionate financial enthusiasts and analysts to join us.</p>
-                        <a class="btn btn-success mt-auto align-self-start" href="contact.html">Get in Touch</a>
+                        <a class="btn btn-success mt-auto align-self-start w-100" href="contact.html">Get in Touch</a>
                     </div>
                 </article>
             </div>
         </section>
-        <section id="values" class="bg-white border rounded p-3 p-lg-4 mt-4">
+
+        <!-- Адаптивная таблица ценностей -->
+        <section id="values" class="bg-white border rounded p-3 p-lg-4 mt-5 hover-effect">
             <h2 class="mb-3">Our Core Values</h2>
-            <ul class="mb-0 ps-4">
-                <li><strong>Simplicity:</strong> Complex topics explained in plain English.</li>
-                <li><strong>Objectivity:</strong> Independent insights without hidden bias.</li>
-                <li><strong>Practicality:</strong> Tools and steps you can apply immediately.</li>
-            </ul>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col" style="width: 25%;">Value</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Simplicity</strong></td>
+                            <td>Complex topics explained in plain English without confusing jargon.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Objectivity</strong></td>
+                            <td>Independent insights and analysis without hidden commercial bias.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Practicality</strong></td>
+                            <td>Actionable tools and clear steps you can apply to your finances immediately.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
     <footer class="bg-dark text-white text-center p-4 mt-4">
         <p class="mb-0">2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
 </body>
 </html>
