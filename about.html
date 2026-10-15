@@ -4,99 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Us | Finance Advising</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="d-flex flex-column min-vh-100 bg-light text-dark">
-    <a class="visually-hidden-focusable p-2" href="#main">Skip to content</a>
+<body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark py-3" data-bs-theme="dark" aria-label="Main navigation">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-graph-up-arrow text-success" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/>
-                    </svg>
-                    <span>Finance Advising</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="main-nav">
-                    <ul class="navbar-nav ms-auto mb-0">
-                        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-white active fw-bold" href="about.html" aria-current="page">About</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/>
+                </svg>
+                <span>Finance Advising</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <main class="container flex-grow-1 py-4 py-lg-5 px-3 px-sm-2" id="main">
-        <h1 class="mb-4">About Us</h1>
-        <section id="creators" aria-labelledby="team-title">
-            <h2 id="team-title" class="mb-3">Meet the Team</h2>
-            <p class="mb-4">We help people understand budgeting, investing, and retirement planning. Our goal is to make financial topics easier to understand.</p>
-            <div class="card-group">
-                <article class="card">
-                    <img src="images/Kulantaev_Meirkhan_Kairgaliuly OG.jpg" class="card-img-top team-photo" alt="Meirkhan Kulantayev">
-                    <div class="card-body d-flex flex-column p-4">
-                        <h3 class="card-title h4 mb-3">Meirkhan Kulantayev</h3>
-                        <p class="card-text mb-3">Meirkhan is an enthusiast with a passion for helping people achieve their financial goals.</p>
-                        <a class="btn btn-success mt-auto align-self-start w-100" href="contact.html">Contact Meirkhan</a>
+
+    <main>
+        <h1 class="hero-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">About Us</h1>
+        <section style="margin-bottom: 3rem;">
+            <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 800px; margin-bottom: 2.5rem;">We help people understand budgeting, investing, and retirement planning. Our goal is to make financial topics easier to understand for everyone.</p>
+            
+            <div class="bento-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="bento-card">
+                    <img src="images/Kulantaev_Meirkhan_Kairgaliuly OG.jpg" class="team-photo" alt="Meirkhan Kulantayev" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 1.25rem; background: #f1f5f9;">
+                    <div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Meirkhan Kulantayev</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Meirkhan is an enthusiast with a passion for helping people achieve their financial goals.</p>
                     </div>
-                </article>
-                <article class="card">
-                    <img src="images/Zeinulla_Nurzhan.jpg" class="card-img-top team-photo" alt="Nurzhan Zeinulla">
-                    <div class="card-body d-flex flex-column p-4">
-                        <h3 class="card-title h4 mb-3">Nurzhan Zeinulla</h3>
-                        <p class="card-text mb-3">Co-founder and analyst dedicated to simplifying financial research for everyone.</p>
-                        <a class="btn btn-success mt-auto align-self-start w-100" href="contact.html">Contact Nurzhan</a>
+                    <a class="btn btn-outline" href="contact.html" style="width: 100%;">Contact Meirkhan</a>
+                </div>
+
+                <div class="bento-card">
+                    <img src="images/Zeinulla_Nurzhan.jpg" class="team-photo" alt="Nurzhan Zeinulla" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 1.25rem; background: #f1f5f9;">
+                    <div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Nurzhan Zeinulla</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Co-founder and analyst dedicated to simplifying financial research for everyone.</p>
                     </div>
-                </article>
-                <article class="card">
-                    <img src="images/what.png" class="card-img-top team-photo" alt="Question mark representing an open team position">
-                    <div class="card-body d-flex flex-column p-4">
-                        <h3 class="card-title h4 mb-3">Join Our Team</h3>
-                        <p class="card-text mb-3">We are always looking for passionate financial enthusiasts and analysts to join us.</p>
-                        <a class="btn btn-success mt-auto align-self-start w-100" href="contact.html">Get in Touch</a>
+                    <a class="btn btn-outline" href="contact.html" style="width: 100%;">Contact Nurzhan</a>
+                </div>
+
+                <div class="bento-card">
+                    <img src="images/what.png" class="team-photo" alt="Open position" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 1.25rem; background: #f1f5f9;">
+                    <div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Join Our Team</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">We are always looking for passionate financial enthusiasts and analysts to join us.</p>
                     </div>
-                </article>
+                    <a class="btn btn-success" href="contact.html" style="width: 100%;">Get in Touch</a>
+                </div>
             </div>
         </section>
 
-        <!-- Адаптивная таблица ценностей -->
-        <section id="values" class="bg-white border rounded p-3 p-lg-4 mt-5 hover-effect">
-            <h2 class="mb-3">Our Core Values</h2>
-            <div class="table-responsive">
-                <table class="table table-hover align-middle mb-0">
-                    <thead class="table-dark">
-                        <tr>
-                            <th scope="col" style="width: 25%;">Value</th>
-                            <th scope="col">Description</th>
+        <section class="bento-card" style="padding: 2rem;">
+            <h2 style="font-size: 1.4rem; margin-bottom: 1.25rem;">Our Core Values</h2>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <th style="padding: 0.75rem 1rem; color: var(--text-main);">Value</th>
+                            <th style="padding: 0.75rem 1rem; color: var(--text-muted);">Description</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><strong>Simplicity</strong></td>
-                            <td>Complex topics explained in plain English without confusing jargon.</td>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1rem; font-weight: 600;">Simplicity</td>
+                            <td style="padding: 1rem; color: var(--text-muted);">Complex topics explained in plain English without confusing jargon.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 1rem; font-weight: 600;">Objectivity</td>
+                            <td style="padding: 1rem; color: var(--text-muted);">Independent insights and analysis without hidden commercial bias.</td>
                         </tr>
                         <tr>
-                            <td><strong>Objectivity</strong></td>
-                            <td>Independent insights and analysis without hidden commercial bias.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Practicality</strong></td>
-                            <td>Actionable tools and clear steps you can apply to your finances immediately.</td>
+                            <td style="padding: 1rem; font-weight: 600;">Practicality</td>
+                            <td style="padding: 1rem; color: var(--text-muted);">Actionable tools and clear steps you can apply to your finances immediately.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
     </main>
-    <footer class="bg-dark text-white text-center p-4 mt-4">
-        <p class="mb-0">2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
+
+    <footer>
+        <p>2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

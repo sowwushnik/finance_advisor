@@ -4,90 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us | Finance Advising</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="d-flex flex-column min-vh-100 bg-light text-dark">
-    <a class="visually-hidden-focusable p-2" href="#main">Skip to content</a>
+<body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark py-3" data-bs-theme="dark" aria-label="Main navigation">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Finance Advising</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="main-nav">
-                    <ul class="navbar-nav ms-auto mb-0">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link text-white active fw-bold" href="contact.html" aria-current="page">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/>
+                </svg>
+                <span>Finance Advising</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <main class="container flex-grow-1 py-4 py-lg-5 px-3 px-sm-2" id="main">
-        <h1 class="mb-4">Contact Us</h1>
-        <section class="row justify-content-center" aria-labelledby="form-title">
-            <div class="col-12 col-lg-8">
-                <div class="bg-white border rounded p-3 p-lg-4">
-                    <h2 id="form-title" class="mb-3">Send a Message</h2>
-                    <p id="form-help" class="mb-4">This is a practice form. Messages are not sent to a server.</p>
-                    <form id="contact-form" class="row g-3" aria-describedby="form-help" onsubmit="event.preventDefault(); document.getElementById('form-status').textContent='The practice form is valid. No message was sent.'">
-                        <div class="col-12 col-md-6">
-                            <label for="name" class="form-label">Name</label>
-                            <input class="form-control" type="text" id="name" name="name" autocomplete="name" required>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label for="email" class="form-label">Email</label>
-                            <div class="input-group">
-                                <span class="input-group-text" aria-hidden="true">@</span>
-                                <input class="form-control" type="email" id="email" name="email" autocomplete="email" required>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <label for="topic" class="form-label">Topic</label>
-                            <select class="form-select" id="topic" name="topic" required>
-                                <option value="">Select a topic</option>
-                                <option value="budgeting">Budgeting</option>
-                                <option value="investing">Investing</option>
-                                <option value="retirement">Retirement planning</option>
-                            </select>
-                        </div>
-                        <fieldset class="col-12">
-                            <legend class="fs-6 mb-2">Experience with finance</legend>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="beginner" name="experience" value="beginner" checked>
-                                <label class="form-check-label" for="beginner">Beginner</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="experienced" name="experience" value="experienced">
-                                <label class="form-check-label" for="experienced">Experienced</label>
-                            </div>
-                        </fieldset>
-                        <div class="col-12">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="copy" name="copy">
-                                <label class="form-check-label" for="copy">I would like a copy of my message</label>
-                            </div>
-                        </div>
-                        <div class="col-12 d-grid d-sm-block">
-                            <button class="btn btn-success" type="submit">Send Message</button>
-                        </div>
-                        <p class="col-12 mb-0" id="form-status" role="status"></p>
-                    </form>
+
+    <main>
+        <div class="form-container">
+            <h1 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Contact Us</h1>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem;">Please fill out all required fields below.</p>
+            
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input class="form-control" type="text" id="name" name="name" placeholder="John Doe">
+                    <span id="name-error" class="error-message"></span>
                 </div>
-            </div>
-        </section>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input class="form-control" type="text" id="email" name="email" placeholder="name@example.com">
+                    <span id="email-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input class="form-control" type="password" id="password" name="password" placeholder="At least 6 characters">
+                    <span id="password-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password" class="form-label">Confirm Password</label>
+                    <input class="form-control" type="password" id="confirm-password" name="confirm-password" placeholder="Repeat password">
+                    <span id="confirm-password-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="topic" class="form-label">Topic</label>
+                    <select class="form-select" id="topic" name="topic">
+                        <option value="">Select a topic...</option>
+                        <option value="budgeting">Budgeting</option>
+                        <option value="investing">Investing</option>
+                        <option value="retirement">Retirement planning</option>
+                    </select>
+                    <span id="topic-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your message..."></textarea>
+                    <span id="message-error" class="error-message"></span>
+                </div>
+
+                <button class="btn btn-success" type="submit" style="width: 100%;">Send Message</button>
+                <p id="form-status" style="margin-top: 1rem; font-weight: 500; font-size: 0.9rem; text-align: center;"></p>
+            </form>
+        </div>
     </main>
-    <footer class="bg-dark text-white text-center p-4 mt-4">
-        <p class="mb-0">2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
+
+    <footer>
+        <p>2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
