@@ -21,29 +21,29 @@
                 <li><a href="blog.html" class="active">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="header-controls">
+                <button id="bg-color-btn" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;">Theme</button>
+                <span id="datetime-display" class="datetime-badge"></span>
+            </div>
         </nav>
     </header>
 
     <main>
         <h1 class="hero-title" style="font-size: 2.2rem; margin-bottom: 1.5rem;">Blog & Insights</h1>
         
-        <section class="bento-grid" style="margin-bottom: 3rem;">
-            <article class="bento-card">
-                <div>
-                    <span style="color: var(--accent); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Update</span>
-                    <h2 style="font-size: 1.35rem; margin: 0.5rem 0;">First Post</h2>
-                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;"><time datetime="2026-09-10">September 10, 2026</time></p>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">This is the first post on our blog. I am Meirkhan, and I am practicing to improve the quality of our content.</p>
-                </div>
-            </article>
-            <article class="bento-card">
-                <div>
-                    <span style="color: var(--accent); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Announcement</span>
-                    <h2 style="font-size: 1.35rem; margin: 0.5rem 0;">Second Post</h2>
-                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;"><time datetime="2026-09-12">September 12, 2026</time></p>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">We updated the appearance. Posts and other content now have a clean structure and modern design.</p>
-                </div>
-            </article>
+        <!-- Кнопки категории для демонстрации Switch / Filter -->
+        <section style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Filter Articles</h2>
+            <div id="category-buttons" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn btn-outline filter-btn active" data-category="All">All</button>
+                <button class="btn btn-outline filter-btn" data-category="Budgeting">Budgeting</button>
+                <button class="btn btn-outline filter-btn" data-category="Investing">Investing</button>
+                <button class="btn btn-outline filter-btn" data-category="Retirement">Retirement</button>
+            </div>
+        </section>
+
+        <!-- Динамический контейнер статей (использует map и filter из JS) -->
+        <section id="dynamic-articles-container" class="bento-grid" style="margin-bottom: 3rem;">
         </section>
 
         <section>
