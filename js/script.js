@@ -1,12 +1,6 @@
-/**
- * Finance Advising Platform - Assignment 5 JS
- */
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ==========================================
-    // 1. SOUND EFFECTS (Web Audio API)
-    // ==========================================
+
     function playClickSound() {
         try {
             const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -32,19 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Привязываем воспроизведение звука ко всем кнопкам и ссылкам
     document.querySelectorAll("button, .btn, .nav-links a").forEach(element => {
         element.addEventListener("click", () => playClickSound());
     });
 
-    // ==========================================
-    // 2. OBJECTS & SWITCH STATEMENTS
-    // ==========================================
     const FinanceApp = {
         title: "Finance Advising Platform",
         version: "2.0",
         
-        // Метод с конструкцией SWITCH для определения времени суток
         getGreetingByTime() {
             const hour = new Date().getHours();
             let timeOfDay;
@@ -66,9 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log(FinanceApp.getGreetingByTime());
 
-    // ==========================================
-    // 3. ARRAYS & HIGHER-ORDER FUNCTIONS (map & filter)
-    // ==========================================
     const articlesData = [
         { title: "Budgeting 101: Master Your Cash Flow", category: "Budgeting", readTime: "3 min" },
         { title: "Stocks vs Bonds: Where to Invest?", category: "Investing", readTime: "5 min" },
@@ -80,12 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById("dynamic-articles-container");
         if (!container) return;
 
-        // Использование высшей функции filter()
         const filtered = category === "All" 
             ? articlesData 
             : articlesData.filter(item => item.category === category);
 
-        // Использование высшей функции map() для рендеринга
         container.innerHTML = filtered.map(art => `
             <article class="bento-card" style="animation: fadeIn 0.4s ease;">
                 <div>
@@ -97,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
         `).join("");
     }
 
-    // Слушатели кликов по кнопкам-фильтрам
     const filterButtons = document.querySelectorAll(".filter-btn");
     filterButtons.forEach(btn => {
         btn.addEventListener("click", (e) => {
@@ -108,12 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Отрисовка статей по умолчанию
     displayFilteredArticles("All");
 
-    // ==========================================
-    // 4. DATETIME DISPLAY
-    // ==========================================
     const datetimeDisplay = document.getElementById("datetime-display");
     function updateDateTime() {
         if (!datetimeDisplay) return;
@@ -129,28 +108,22 @@ document.addEventListener("DOMContentLoaded", () => {
     updateDateTime();
     setInterval(updateDateTime, 1000);
 
-    // ==========================================
-    // 5. THEME TOGGLE & JS ANIMATION
-    // ==========================================
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
         document.body.classList.add("dark-mode");
     }
 
-    // 2. Обработчик клика по кнопке Theme
     const themeBtn = document.getElementById("bg-color-btn");
     if (themeBtn) {
         themeBtn.addEventListener("click", () => {
             document.body.classList.toggle("dark-mode");
             
-            // Сохраняем состояние в localStorage
             if (document.body.classList.contains("dark-mode")) {
                 localStorage.setItem("theme", "dark");
             } else {
                 localStorage.setItem("theme", "light");
             }
             
-            // Анимация кнопки
             themeBtn.style.transform = "scale(1.1) rotate(5deg)";
             setTimeout(() => {
                 themeBtn.style.transform = "scale(1) rotate(0deg)";
@@ -158,9 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ==========================================
-    // 6. ACCORDION
-    // ==========================================
     const accordionHeaders = document.querySelectorAll(".accordion-header");
     accordionHeaders.forEach(header => {
         header.addEventListener("click", () => {
@@ -185,9 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // ==========================================
-    // 7. KEYBOARD NAVIGATION & EVENTS
-    // ==========================================
     const navItems = document.querySelectorAll(".nav-links a");
     let currentNavIndex = 0;
 
@@ -206,9 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // ==========================================
-    // 8. MODAL & FORM VALIDATION (Callbacks)
-    // ==========================================
     const openPopupBtn = document.getElementById("open-popup-btn");
     const popupModal = document.getElementById("popup-modal");
     const closePopupBtn = document.getElementById("close-popup-btn");
