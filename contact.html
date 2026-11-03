@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us | Finance Advising</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
+    <div id="scroll-progress-bar"></div>
+
     <header>
         <nav class="navbar">
             <a class="navbar-brand" href="index.html">
@@ -15,76 +19,156 @@
                 </svg>
                 <span>Finance Advising</span>
             </a>
-            <div class="header-controls">
-            <button id="bg-color-btn" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;">Theme</button>
-            <span id="datetime-display" class="datetime-badge"></span>
-            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
+            <div class="header-controls">
+                <button id="bg-color-btn" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;" type="button">Theme</button>
+                <span id="datetime-display" class="datetime-badge"></span>
+            </div>
         </nav>
     </header>
 
     <main>
-        <div class="form-container">
-            <h1 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Contact Us</h1>
-            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem;">Please fill out all required fields below.</p>
-            
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name" class="form-label">Name</label>
-                    <input class="form-control" type="text" id="name" name="name" placeholder="John Doe">
-                    <span id="name-error" class="error-message"></span>
+        <section class="hero-section" style="margin-bottom: 2rem;">
+            <div class="hero-pill">
+                <span>Contact Channels</span>
+            </div>
+            <h1 class="hero-title" style="margin-bottom: 0.6rem;">
+                Get in Touch with <span class="highlight-text">Our Team</span>
+            </h1>
+            <p class="hero-subtitle">
+                Have questions about student budgeting, need peer mentorship, or want to contribute an article? Send us a message or copy our direct contact details below.
+            </p>
+        </section>
+
+        <div class="contact-layout">
+            <div class="form-container">
+                <h2 style="font-size: 1.35rem; margin-bottom: 0.4rem; font-weight: 700;">Send a Message</h2>
+                <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem;">
+                    Please fill out the form fields below.
+                </p>
+                
+                <form id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input class="form-control" type="text" id="name" name="name" placeholder="John Doe" autocomplete="name">
+                        <span id="name-error" class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input class="form-control" type="email" id="email" name="email" placeholder="student@example.com" autocomplete="email">
+                        <span id="email-error" class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Account Password</label>
+                        <input class="form-control" type="password" id="password" name="password" placeholder="At least 6 characters" autocomplete="new-password">
+                        <span id="password-error" class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                        <input class="form-control" type="password" id="confirm-password" name="confirm-password" placeholder="Repeat your password" autocomplete="new-password">
+                        <span id="confirm-password-error" class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="topic" class="form-label">Inquiry Topic</label>
+                        <select class="form-select" id="topic" name="topic">
+                            <option value="">Select a topic...</option>
+                            <option value="budgeting">Student Budgeting &amp; Cash Flow</option>
+                            <option value="investing">Index Funds &amp; Investing Basics</option>
+                            <option value="retirement">Retirement &amp; Compound Interest</option>
+                            <option value="feedback">Platform Feedback &amp; Suggestions</option>
+                        </select>
+                        <span id="topic-error" class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message Details</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Describe your question or message..."></textarea>
+                        <span id="message-error" class="error-message"></span>
+                    </div>
+
+                    <div style="display: flex; gap: 10px; margin-top: 0.5rem;">
+                        <button class="btn btn-primary" type="submit" style="flex: 2;">
+                            Send Message
+                        </button>
+                        <button class="btn btn-outline" type="button" id="reset-form-btn" style="flex: 1;">
+                            Reset Form
+                        </button>
+                    </div>
+                    <p id="form-status" style="margin-top: 0.75rem; font-weight: 500; font-size: 0.85rem; text-align: center;"></p>
+                </form>
+            </div>
+
+            <div class="contact-info-card">
+                <div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Direct Reach</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.75rem;">
+                        Reach out directly through our student channels or visit our campus peer desk.
+                    </p>
+
+                    <div class="contact-detail-item">
+                        <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.2rem;">Official Email</h4>
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
+                            <code class="copy-text" style="font-size: 0.82rem; padding: 0.3rem 0.55rem;">support@financeadvising.kz</code>
+                            <div class="copy-btn-wrapper">
+                                <button class="btn btn-outline copy-btn" data-copy="support@financeadvising.kz" type="button" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;">
+                                    Copy Email
+                                </button>
+                                <span class="copy-tooltip">Copied to clipboard!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.2rem;">Phone Inquiries</h4>
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
+                            <code class="copy-text" style="font-size: 0.82rem; padding: 0.3rem 0.55rem;">+7 (7172) 12-34-56</code>
+                            <div class="copy-btn-wrapper">
+                                <button class="btn btn-outline copy-btn" data-copy="+7 (7172) 12-34-56" type="button" style="padding: 0.3rem 0.6rem; font-size: 0.78rem;">
+                                    Copy Phone
+                                </button>
+                                <span class="copy-tooltip">Copied to clipboard!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.2rem;">Campus Location</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">
+                            University Campus, Academic Block C, Astana, Kazakhstan
+                        </p>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.2rem;">Operating Hours</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">
+                            Monday - Friday: 09:00 AM - 06:00 PM (Astana Time)
+                        </p>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input class="form-control" type="text" id="email" name="email" placeholder="name@example.com">
-                    <span id="email-error" class="error-message"></span>
+                <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; margin-top: 1.5rem;">
+                    <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.25rem;">Response Time</h4>
+                    <p style="color: var(--text-muted); font-size: 0.8rem; margin: 0;">
+                        Our student mentors usually reply to inquiries within 24 business hours.
+                    </p>
                 </div>
-
-                <div class="form-group">
-                    <label for="password" class="form-label">Password</label>
-                    <input class="form-control" type="password" id="password" name="password" placeholder="At least 6 characters">
-                    <span id="password-error" class="error-message"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="confirm-password" class="form-label">Confirm Password</label>
-                    <input class="form-control" type="password" id="confirm-password" name="confirm-password" placeholder="Repeat password">
-                    <span id="confirm-password-error" class="error-message"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="topic" class="form-label">Topic</label>
-                    <select class="form-select" id="topic" name="topic">
-                        <option value="">Select a topic...</option>
-                        <option value="budgeting">Budgeting</option>
-                        <option value="investing">Investing</option>
-                        <option value="retirement">Retirement planning</option>
-                    </select>
-                    <span id="topic-error" class="error-message"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your message..."></textarea>
-                    <span id="message-error" class="error-message"></span>
-                </div>
-
-                <button class="btn btn-success" type="submit" style="width: 100%;">Send Message</button>
-                <p id="form-status" style="margin-top: 1rem; font-weight: 500; font-size: 0.9rem; text-align: center;"></p>
-            </form>
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
+        <p>2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla &bull; Web Development Project</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <div id="toast-container"></div>
 </body>
 </html>

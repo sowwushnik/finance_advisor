@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Finance Advising</title>
+    <title>Finance Advising - Personal Finance for Students</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
+    <div id="scroll-progress-bar"></div>
+
     <header>
         <nav class="navbar">
             <a class="navbar-brand" href="index.html">
@@ -22,58 +26,217 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="header-controls">
-                <button id="bg-color-btn" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;">Theme</button>
+                <button id="bg-color-btn" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;" type="button">Theme</button>
                 <span id="datetime-display" class="datetime-badge"></span>
             </div>
         </nav>
     </header>
 
     <main>
-        <h1 class="hero-title">Master your money.<br>Shape your future.</h1>
-        
-        <section class="bento-grid">
-            <div class="bento-card">
-                <div>
-                    <h2>Learn about finance</h2>
-                    <p>Grow your financial literacy and build solid habits through shared experience and expert insights.</p>
-                </div>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <a class="btn btn-success" href="about.html">Meet the team</a>
-                    <button id="open-popup-btn" class="btn btn-outline">Subscribe</button>
-                </div>
+        <section class="hero-section">
+            <div class="hero-pill">
+                <span>Student Finance Platform</span>
             </div>
-            
-            <div class="bento-card">
-                <div>
-                    <h2>Explore & Connect</h2>
-                    <p>Dive into our latest blog posts, explore core wealth topics, or get in touch with our team directly.</p>
+            <h1 class="hero-title">
+                <span id="hero-greeting">Good day!</span><br>
+                Master your money.<br>
+                <span class="highlight-text">Shape your financial future.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Grow your financial literacy, build healthy money habits, and make confident investment decisions with clear guides written for university students.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-success" href="#calculator">Calculate My Budget</a>
+                <a class="btn btn-outline" href="blog.html">Read Guides</a>
+                <button id="open-popup-btn" class="btn btn-outline" type="button">Subscribe</button>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number-wrapper">
+                    <span class="counter-number" data-target="2500" data-suffix="+">0</span>
                 </div>
-                <div style="display: flex; gap: 10px;">
-                    <a class="btn btn-outline" href="blog.html" style="flex: 1;">Blog</a>
-                    <a class="btn btn-outline" href="contact.html" style="flex: 1;">Contact</a>
+                <div class="stat-label">Active Student Readers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number-wrapper">
+                    <span class="counter-number" data-target="1200" data-prefix="$" data-suffix="K+">0</span>
+                </div>
+                <div class="stat-label">Student Savings Tracked</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number-wrapper">
+                    <span class="counter-number" data-target="48" data-suffix="+">0</span>
+                </div>
+                <div class="stat-label">Practical Finance Guides</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number-wrapper">
+                    <span class="counter-number" data-target="98" data-suffix="%">0</span>
+                </div>
+                <div class="stat-label">Positive Feedback Rate</div>
+            </div>
+        </section>
+
+        <section id="calculator" class="calculator-card">
+            <div class="section-header">
+                <span class="feature-badge">Interactive Tool</span>
+                <h2 class="section-title">50/30/20 Smart Budget Calculator</h2>
+                <p class="section-subtitle">
+                    Enter your monthly income to generate an optimal breakdown following the 50/30/20 personal finance framework.
+                </p>
+            </div>
+
+            <div class="calc-inputs-row">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label for="monthly-income-input" class="form-label">Monthly Net Income ($)</label>
+                    <input type="number" id="monthly-income-input" class="form-control" placeholder="e.g. 1500" min="50" step="50" value="1500">
+                </div>
+                <button id="calc-btn" class="btn btn-success" type="button" style="white-space: nowrap;">
+                    Calculate Breakdown
+                </button>
+            </div>
+
+            <div id="calc-results-box" class="calc-results-box">
+                <div class="calc-progress-visual">
+                    <div class="progress-segment-needs" title="Needs (50%)"></div>
+                    <div class="progress-segment-wants" title="Wants (30%)"></div>
+                    <div class="progress-segment-savings" title="Savings (20%)"></div>
+                </div>
+
+                <div class="calc-breakdown-grid">
+                    <div class="calc-pill-card">
+                        <h4>Needs (50%)</h4>
+                        <div id="calc-needs-val" class="calc-amount">$750</div>
+                        <p>Rent, groceries, utilities, transit</p>
+                    </div>
+                    <div class="calc-pill-card">
+                        <h4>Wants (30%)</h4>
+                        <div id="calc-wants-val" class="calc-amount">$450</div>
+                        <p>Dining out, leisure, personal items</p>
+                    </div>
+                    <div class="calc-pill-card">
+                        <h4>Savings (20%)</h4>
+                        <div id="calc-savings-val" class="calc-amount">$300</div>
+                        <p>Emergency fund, investments, debt payoff</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; background: var(--bg); padding: 0.85rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                    <span id="calc-summary-text" class="copy-text" style="font-size: 0.85rem; border: none; background: transparent; padding: 0;">
+                        Budget Breakdown ($1,500): Needs: $750, Wants: $450, Savings: $300
+                    </span>
+                    <div class="copy-btn-wrapper">
+                        <button class="btn btn-outline copy-btn" type="button">
+                            <span>Copy Plan</span>
+                        </button>
+                        <span class="copy-tooltip">Copied to clipboard!</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 style="font-size: 1.5rem; margin-bottom: 1.25rem;">Frequently Asked Questions</h2>
+        <section style="margin-bottom: 3.5rem;">
+            <div class="section-header">
+                <h2 class="section-title">Core Financial Topics</h2>
+                <p class="section-subtitle">Key knowledge every young professional and student needs to manage their funds.</p>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <div>
+                        <span class="feature-badge">Budgeting</span>
+                        <h2>Expense Tracking &amp; Cash Flow</h2>
+                        <p>Learn practical methods to eliminate impulse spending, organize expenses into clear categories, and track money consistently.</p>
+                    </div>
+                    <div>
+                        <a class="btn btn-outline" href="blog.html">Explore Guides &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div>
+                        <span class="feature-badge">Investing</span>
+                        <h2>Index Funds &amp; Compound Growth</h2>
+                        <p>Understand how broad-market index investing works. Discover why steady long-term participation outpaces market timing.</p>
+                    </div>
+                    <div>
+                        <a class="btn btn-outline" href="blog.html">Read Investing Tips &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div>
+                        <span class="feature-badge">Safety Net</span>
+                        <h2>Emergency Fund Fundamentals</h2>
+                        <p>Avoid relying on high-interest loans in unexpected situations. Build a reliable 3 to 6 month cash reserve.</p>
+                    </div>
+                    <div>
+                        <a class="btn btn-outline" href="blog.html">Learn Safety Steps &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div>
+                        <span class="feature-badge">Student Life</span>
+                        <h2>Debt Management &amp; Credit Score</h2>
+                        <p>Understand how credit scores function, structure loan repayments, and choose between the Snowball and Avalanche methods.</p>
+                    </div>
+                    <div>
+                        <a class="btn btn-outline" href="about.html">Meet Our Mentors &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="copy-snippet-card">
+            <div class="copy-snippet-header">
+                <h4>Financial Habit of the Month</h4>
+                <p>A proven principle recommended by personal finance educators:</p>
+            </div>
+            <div class="copy-action-group">
+                <code class="copy-text">Pay yourself first: Transfer 15% to savings before spending</code>
+                <div class="copy-btn-wrapper">
+                    <button class="btn btn-outline copy-btn" type="button">Copy Tip</button>
+                    <span class="copy-tooltip">Copied to clipboard!</span>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 3rem;">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Answers to common student questions about our educational platform.</p>
+            </div>
+
+            <div class="search-box-wrapper" style="margin-bottom: 1.25rem;">
+                <input type="text" id="faq-search-input" class="form-control" placeholder="Search FAQ questions (e.g. 'free', 'creators', 'investing')..." autocomplete="off">
+            </div>
+
             <div class="accordion-wrapper">
                 <div class="accordion-item">
-                    <button class="accordion-header" aria-expanded="false">What is Finance Advising?</button>
+                    <button class="accordion-header" aria-expanded="false" type="button">What is the mission of Finance Advising?</button>
                     <div class="accordion-content">
-                        <p style="padding-bottom: 1.25rem;">We help people understand budgeting, investing, and retirement planning through simplified guidance.</p>
+                        <p style="padding-bottom: 1.25rem;">We provide students and young adults with objective, clear knowledge about budgeting, investing, and financial independence.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-header" aria-expanded="false">Are the educational services free?</button>
+                    <button class="accordion-header" aria-expanded="false" type="button">Are all the guides and tools free to use?</button>
                     <div class="accordion-content">
-                        <p style="padding-bottom: 1.25rem;">Yes! All our core guides, articles, and financial tips are entirely open and accessible to everyone.</p>
+                        <p style="padding-bottom: 1.25rem;">Yes. All our core guides, interactive financial calculators, and tips are open and free with no subscription fees.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-header" aria-expanded="false">How can I reach out to the creators?</button>
+                    <button class="accordion-header" aria-expanded="false" type="button">How can I contact the project creators?</button>
                     <div class="accordion-content">
-                        <p style="padding-bottom: 1.25rem;">You can contact Meirkhan and Nurzhan via the contact form on our website.</p>
+                        <p style="padding-bottom: 1.25rem;">You can reach Meirkhan Kulantayev and Nurzhan Zeinulla directly via the contact form on our website or visit the About page.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" type="button">Can students with zero financial background start investing?</button>
+                    <div class="accordion-content">
+                        <p style="padding-bottom: 1.25rem;">Yes. We recommend starting with simple index funds and establishing an emergency fund before making higher-risk allocations.</p>
                     </div>
                 </div>
             </div>
@@ -82,24 +245,26 @@
 
     <div id="popup-modal" class="modal-overlay">
         <div class="modal-container">
-            <button id="close-popup-btn" class="modal-close">&times;</button>
-            <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 700;">Stay Updated</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Join our newsletter for weekly financial insights.</p>
+            <button id="close-popup-btn" class="modal-close" type="button">&times;</button>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem; font-weight: 700;">Stay Updated</h3>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.25rem;">
+                Subscribe to our weekly student wealth newsletter.
+            </p>
             <form id="popup-form">
                 <div class="form-group">
-                    <input type="text" id="popup-email" class="form-control" placeholder="name@example.com">
+                    <label for="popup-email" class="form-label">Email Address</label>
+                    <input type="email" id="popup-email" class="form-control" placeholder="student@example.com">
                     <span id="popup-email-error" class="error-message"></span>
                 </div>
                 <button type="submit" class="btn btn-success" style="width: 100%;">Subscribe Now</button>
-                <p id="popup-status" style="margin-top: 0.75rem; font-size: 0.85rem; text-align: center;"></p>
             </form>
         </div>
     </div>
 
     <footer>
-        <p>2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla</p>
+        <p>2026 Made by Meirkhan Kulantayev, Nurzhan Zeinulla &bull; Web Development Project</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <div id="toast-container"></div>
 </body>
 </html>
